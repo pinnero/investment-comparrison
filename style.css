@@ -97,3 +97,35 @@ button:hover {
     color: #777;
     margin-top: 5px;
 }
+
+/* style.css - הוסף את הכללים הבאים */
+
+.result-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.result-block h3 {
+    color: #004a8f;
+    margin-top: 0;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 5px;
+}
+
+/* עיצוב ערך לפני מס */
+.pre-tax-value {
+    font-weight: normal;
+    color: #6c757d; /* אפור - ערך 'תיאורטי' גבוה יותר */
+    float: left;
+}
+
+/* עיצוב ערך אחרי מס */
+.post-tax-value {
+    font-weight: bold;
+    color: #dc3545; /* אדום/בולט - הסכום הנקי ביד */
+    float: left;
+    font-size: 1.2em; 
+}
