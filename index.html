@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחשבון תשואות השקעה</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>מחשבון השקעות להשוואה: מדדים מול נדל"ן</h1>
+        
+        <label for="initialCapital">הון התחלתי (₪):</label>
+        <input type="number" id="initialCapital" value="200000" min="1000">
+
+        <label for="investmentYears">שנים להשקעה:</label>
+        <input type="number" id="investmentYears" value="20" min="1">
+
+        ---
+        
+        <h2>💰 פרמטרים גלובליים</h2>
+        <div class="parameters">
+            <label for="taxRate">מס רווחי הון (%):</label>
+            <input type="number" id="taxRate" value="25" disabled> <label for="spReturn">תשואת S&P שנתית (%):</label>
+            <input type="number" id="spReturn" value="10">
+
+            <label for="nasdaqReturn">תשואת Nasdaq שנתית (%):</label>
+            <input type="number" id="nasdaqReturn" value="16">
+        </div>
+
+        ---
+
+        <h2>🏠 פרמטרים לנדל"ן</h2>
+        <div class="realEstateParameters">
+            <label for="city">בחר עיר/אזור (תשואת שכירות):</label>
+            <select id="city">
+                </select>
+            
+            <label for="priceAppreciation">עליית מחיר שנתית נדל"ן (%):</label>
+            <input type="number" id="priceAppreciation" value="4">
+
+            <label for="leverage">מינוף (כפול):</label>
+            <input type="number" id="leverage" value="4" min="1">
+            
+            <label for="closingCosts">עלויות נלוות (כולל מס רכישה/עו"ד/תיווך) (₪):</label>
+            <input type="number" id="closingCosts" value="35000">
+            
+            <p class="note"><strong>הנחות חישוב נדל"ן:</strong></p>
+            <ul>
+                <li>שכר הדירה מכסה את החזר המשכנתא (ריבית וקרן).</li>
+                <li>שליש מההכנסה משכירות הולך **לסגירת החוב בבנק** (הפחתת קרן המשכנתא).</li>
+                <li>אין מס דירה יחידה (מס שבח מחושב באופן פשוט על הרווח).</li>
+            </ul>
+        </div>
+        
+        <button onclick="calculateInvestment()">חשב תשואה</button>
+        
+        <div id="results">
+            <h2>📊 תוצאות השקעה סופיות (לאחר מס רווחי הון)</h2>
+            <p><strong>שווי סופי S&P:</strong> <span id="spResult">לחץ 'חשב'</span></p>
+            <p><strong>שווי סופי Nasdaq:</strong> <span id="nasdaqResult">לחץ 'חשב'</span></p>
+            <p><strong>שווי סופי נדל"ן:</strong> <span id="realEstateResult">לחץ 'חשב'</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
