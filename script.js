@@ -125,8 +125,22 @@ function calculateInvestment() {
     // ----------------------------------
     // 📝 הצגת התוצאות
     // ----------------------------------
-    document.getElementById('spResult').textContent = formatCurrency(spFinalValue_postTax);
+    // --- Nasdaq ---
+    // לפני מס
+    document.getElementById('nasdaqPreTax').textContent = formatCurrency(nasdaqFinalValue_preTax);
+    // אחרי מס
     document.getElementById('nasdaqResult').textContent = formatCurrency(nasdaqFinalValue_postTax);
+    
+    // --- S&P 500 ---
+    // לפני מס
+    document.getElementById('spPreTax').textContent = formatCurrency(spFinalValue_preTax);
+    // אחרי מס
+    document.getElementById('spResult').textContent = formatCurrency(spFinalValue_postTax);
+    
+    // --- נדל"ן ---
+    // לפני מס
+    document.getElementById('realEstatePreTax').textContent = formatCurrency(realEstateFinalValue_preTax);
+    // אחרי מס
     document.getElementById('realEstateResult').textContent = formatCurrency(realEstateFinalValue_postTax);
 }
 
