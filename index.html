@@ -54,12 +54,27 @@
         </div>
         
         <button onclick="calculateInvestment()">חשב תשואה</button>
-        
+
         <div id="results">
-            <h2>📊 תוצאות השקעה סופיות (לאחר מס רווחי הון)</h2>
-            <p><strong>שווי סופי S&P:</strong> <span id="spResult">לחץ 'חשב'</span></p>
-            <p><strong>שווי סופי Nasdaq:</strong> <span id="nasdaqResult">לחץ 'חשב'</span></p>
-            <p><strong>שווי סופי נדל"ן:</strong> <span id="realEstateResult">לחץ 'חשב'</span></p>
+            <h2>📊 תוצאות השקעה סופיות</h2>
+            
+            <div class="result-block">
+                <h3>🚀 Nasdaq (תנודתיות גבוהה 📈📈📈)</h3>
+                <p><strong>שווי סופי לפני מס:</strong> <span class="pre-tax-value" id="nasdaqPreTax">לחץ 'חשב'</span></p>
+                <p><strong>שווי סופי לאחר מס:</strong> <span class="post-tax-value" id="nasdaqResult">לחץ 'חשב'</span></p>
+            </div>
+        
+            <div class="result-block">
+                <h3>⭐ S&P 500 (תנודתיות בינונית 📈📈)</h3>
+                <p><strong>שווי סופי לפני מס:</strong> <span class="pre-tax-value" id="spPreTax">לחץ 'חשב'</span></p>
+                <p><strong>שווי סופי לאחר מס:</strong> <span class="post-tax-value" id="spResult">לחץ 'חשב'</span></p>
+            </div>
+        
+            <div class="result-block">
+                <h3>🏠 נדל"ן (תנודתיות נמוכה 📈)</h3>
+                <p><strong>שווי סופי לפני מס:</strong> <span class="pre-tax-value" id="realEstatePreTax">לחץ 'חשב'</span></p>
+                <p><strong>שווי סופי לאחר מס:</strong> <span class="post-tax-value" id="realEstateResult">לחץ 'חשב'</span></p>
+            </div>
         </div>
     </div>
 
